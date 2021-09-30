@@ -5,6 +5,7 @@ const restaurantList = (props) => {
   return (
     <div className="rContainer">
       <div className="rTitle">
+      // eslint-disable-next-line
         {props.restaurants.filter((restaurant) =>{
           if(props.term === ""){
             return restaurant

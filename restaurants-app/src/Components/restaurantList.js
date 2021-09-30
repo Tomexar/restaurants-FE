@@ -6,7 +6,7 @@ const restaurantList = (props) => {
     <div className="rContainer">
       <div className="rTitle">
         {props.restaurants.filter((restaurant) =>{
-          if(props.term == ""){
+          if(props.term === ""){
             return restaurant
           } else if(restaurant.name.toLowerCase().includes(props.term.toLowerCase())){
             return restaurant

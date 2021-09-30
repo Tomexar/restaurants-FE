@@ -8,7 +8,6 @@ import RestaurantPage from "./Components/restPage"
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState("")
-    const [results, setResults] = useState("")
     const searchHandler = (searchTerm) => {
         setSearchTerm(searchTerm)
     }

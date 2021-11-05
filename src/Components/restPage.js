@@ -26,10 +26,23 @@ const RestaurantPage = () => {
           LOADING
         </div>
       )}
-      <div className="header_img">
+      <div className="page_header">
+        <div className="header_img">
+          {restaurant && (
+            <img src={`/${restaurant.img}`} alt={`${restaurant.img}`} />
+          )}
+        </div>
+        <div className="header_txt">
         {restaurant && (
-          <img src={`/${restaurant.img}`} alt={`${restaurant.img}`} />
+          <div>
+          <h1 className="page_name">{restaurant.name}</h1>
+          <p className="page_hours">
+            Hours: {restaurant.hh_start} - {restaurant.hh_end}
+          </p>
+          <p className="page_location">{restaurant.location}</p>
+          </div>
         )}
+        </div>
       </div>
 
       <div className="black_arrow">
@@ -40,11 +53,11 @@ const RestaurantPage = () => {
 
       {restaurant && (
         <article className="copy">
-          <h1 className="page_name">{restaurant.name}</h1>
+          {/* <h1 className="page_name">{restaurant.name}</h1>
           <p className="page_hours">
             Hours: {restaurant.hh_start} - {restaurant.hh_end}
           </p>
-          <p className="page_location">{restaurant.location}</p>
+          <p className="page_location">{restaurant.location}</p> */}
 
           {/* <h2 className = 'MENU'>MENU:</h2> */}
           {restaurant && <Menu menu={restaurant.menu} />}
@@ -52,14 +65,18 @@ const RestaurantPage = () => {
       )}
       {restaurant && (
         <div className="contact">
-          <a href={'tel:'+restaurant.phone}>
+          <a href={"tel:" + restaurant.phone}>
             <FontAwesomeIcon className="phone" icon={faPhone} size="lg" />
           </a>
-          <a href = {restaurant.instagram}target="_blank">
-          <FontAwesomeIcon className="instagram" icon={faInstagram} size="lg" />
+          <a href={restaurant.instagram} target="_blank">
+            <FontAwesomeIcon
+              className="instagram"
+              icon={faInstagram}
+              size="lg"
+            />
           </a>
-          <a href = {restaurant.website}target="_blank">
-          <FontAwesomeIcon className="website" icon={faGlobe} size="lg" />
+          <a href={restaurant.website} target="_blank">
+            <FontAwesomeIcon className="website" icon={faGlobe} size="lg" />
           </a>
         </div>
       )}

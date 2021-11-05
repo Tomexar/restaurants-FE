@@ -183,6 +183,11 @@ img {
 .copy {
   padding-left: 10px;
 }
+
+.header_txt{
+  padding-left: 10px;
+}
+
 .page_name {
   margin: 0;
   padding:0;
@@ -227,6 +232,63 @@ img {
   justify-content: space-evenly;
   padding-bottom: 80px;
 }
+
+
+@media (min-width: 700px){
+  .rTitle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card{
+    width: 300px
+  }
+  .contact {
+    justify-content: space-between;
+    padding-left: 10px;
+    width: 100px
+  }
+}
+
+@media (min-width: 1000px){
+  .rContainer{
+    background-color: white;
+  }
+  .List {
+    margin: auto;
+    width: 800px;
+    background-color: white;
+  }
+  .card {
+    background-color: lightgray;
+  }
+  .page_header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .header_txt {
+    order: -1;
+    padding-top: 100px;
+  }
+
+  .copy{
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .contact {
+    justify-content: space-between;
+    margin: auto;
+    width: 300px
+  }
+}
+
 
 
 
